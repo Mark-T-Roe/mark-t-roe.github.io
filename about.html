@@ -14,6 +14,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8" />
   <title>About | Mark Roe</title>
   <style>
@@ -150,7 +152,7 @@
     position: static;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
   }
 
   .site-logo {
@@ -161,42 +163,71 @@
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
+    gap: 10px 14px;
+    padding: 0.75rem 1rem 1rem 1rem;
     font-size: 1.2rem;
     text-align: center;
+    height: auto;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  /* Let the page scroll on mobile */
+  body {
+    height: auto;
+    overflow: auto;
   }
 
   .container {
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 100px 20px 40px 20px;
+    padding: 20px 18px 40px 18px;
+    gap: 28px;
   }
 
-  .image-section {
-    width: 100%;
-    margin-bottom: 30px;
-    align-items: center;
-  }
-
+  /* Force text section first */
   .text-section {
+    order: 1;
     width: 100%;
-    max-width: 100%;
-    text-align: center;
+    max-width: 720px;
+    text-align: left;
+  }
+
+  /* Move image/logos below the text */
+  .image-section {
+    order: 2;
+    width: 100%;
+    margin: 0;
+    top: 0;              /* undo desktop offset */
+    align-items: center; /* keep centered */
   }
 
   .about-title {
-    font-size: 2rem;
+    font-size: 2.0rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 0;
+    margin: 14px 0;
   }
 
   .profile-pic {
     width: 200px;
     height: 200px;
+    margin-bottom: 18px;
   }
 
   .logo-row {
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 24px;
     justify-content: center;
   }
 
@@ -204,13 +235,12 @@
     width: 80px;
   }
 
-  .logo-solo img {
-    width: 200px;
+  .logo-solo {
+    margin-top: 16px;
   }
 
-  p {
-    font-size: 1.05rem;
-    padding: 0 10px;
+  .logo-solo img {
+    width: 200px;
   }
 }
 

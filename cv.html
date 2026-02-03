@@ -15,7 +15,10 @@
   <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
 
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>CV | Mark Roe</title>
+
   <style>
     header {
       position: fixed;
@@ -95,6 +98,29 @@
       background-color: #444;
     }
 
+    /* Mobile helper UI (hidden on desktop) */
+    .mobile-note,
+    .open-button {
+      display: none;
+    }
+
+    .open-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #fdfdfb;
+      color: #222;
+      text-decoration: none;
+      font-size: 1.05rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .open-button:hover {
+      border-color: #666;
+      color: #000;
+    }
+
     .pdf-wrapper {
       max-width: 900px;
       margin: 0 auto;
@@ -106,60 +132,79 @@
       border: none;
     }
 
-@media (max-width: 768px) {
-  header {
-    position: static;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
+    /* -------------------------
+       Mobile
+       ------------------------- */
+    @media (max-width: 768px) {
+      header {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0 0.5rem 0;
+      }
 
-  .site-logo {
-    height: 60px;
-    margin: 0 auto;
-  }
+      .site-logo {
+        height: 60px;
+        margin: 0 auto;
+      }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-    font-size: 1.2rem;
-    text-align: center;
-  }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        padding: 0.75rem 1rem 1rem 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        height: auto;
+      }
 
-  .container {
-    padding: 100px 20px 40px 20px;
-    text-align: center;
-  }
+      nav a {
+        margin-left: 0;
+      }
 
-  h1 {
-    width: 100%;
-    font-size: 2rem;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
+      .container {
+        padding: 18px 16px 40px 16px;
+        text-align: center;
+      }
 
-  .download-button {
-    font-size: 1rem;
-    padding: 10px 16px;
-    margin-top: 15px;
-  }
+      h1 {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
+        margin: 12px auto 14px auto;
+      }
 
-  .pdf-wrapper {
-    max-width: 100%;
-    padding: 0 10px;
-  }
+      .download-button {
+        font-size: 1rem;
+        padding: 10px 16px;
+        margin-top: 10px;
+      }
 
-  .pdf-frame {
-    height: 600px;
-    width: 100%;
-  }
-}
+      /* Show the mobile helper UI */
+      .mobile-note,
+      .open-button {
+        display: inline-block;
+      }
 
+      .mobile-note {
+        display: block;
+        max-width: 520px;
+        margin: 14px auto 0 auto;
+        font-size: 1.0rem;
+        line-height: 1.6;
+        color: #555;
+        padding: 0 6px;
+      }
 
-
+      /* Hide embedded PDF on mobile (cleaner UX) */
+      .pdf-wrapper {
+        display: none;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <a href="index.html">
@@ -178,7 +223,16 @@
   <div class="container">
     <div class="header">
       <h1>Curriculum Vitae</h1>
+
       <a href="assets/pdfs/MarkRoe_CV.pdf" download class="download-button">Download CV (PDF)</a>
+
+      <p class="mobile-note">
+        On mobile, the PDF viewer can be a bit awkward — best experience is to open the CV directly.
+      </p>
+
+      <a href="assets/pdfs/MarkRoe_CV.pdf" class="open-button" target="_blank" rel="noopener">
+        Open CV in a new tab
+      </a>
     </div>
 
     <div class="pdf-wrapper">
@@ -187,6 +241,7 @@
   </div>
 </body>
 </html>
+
 
 
 

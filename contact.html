@@ -14,6 +14,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8" />
   <title>Contact | Mark Roe</title>
   <style>
@@ -141,7 +143,7 @@
     position: static;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
   }
 
   .site-logo {
@@ -152,27 +154,47 @@
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
+    gap: 10px 14px;
+    padding: 0.75rem 1rem 1rem 1rem;
     font-size: 1.2rem;
     text-align: center;
+    height: auto;          /* important */
+  }
+
+  nav a {
+    margin-left: 0;        /* undo desktop spacing */
+  }
+
+  /* Let the page scroll naturally */
+  body {
+    height: auto;
   }
 
   .contact-container {
-    padding: 40px 20px;
-    padding-top: 100px;
+    padding: 18px 16px 40px 16px;
   }
 
   h1 {
     width: 100%;
     font-size: 2rem;
-    padding: 0 10px;
+    padding: 0 10px 10px 10px;
     box-sizing: border-box;
+    margin: 12px auto 18px auto;
   }
 
+  /* Mobile: single card layout */
   .contact-block {
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    align-items: stretch;
+    gap: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px 16px;
+    background: #fff;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .divider {
@@ -181,23 +203,47 @@
 
   .contact-labels,
   .contact-values {
-    align-items: center;
-    text-align: center;
+    text-align: left;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .contact-labels {
+    min-width: 0;
   }
 
   .contact-labels p {
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .contact-values p {
+    margin: 0;
   }
 
   .contact-labels img {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
   }
 
+  /* Bigger, nicer tap targets */
   .contact-values a {
-    font-size: 1.1rem;
+    display: inline-block;
+    font-size: 1.08rem;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fdfdfb;
+  }
+
+  .contact-values a:hover {
+    text-decoration: none;
+    border-color: #666;
   }
 }
+
 
 
 

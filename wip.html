@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14HMNXG7DB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-14HMNXG7DB');
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/icons/favicon.ico" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
+
+  <meta charset="UTF-8" />
+  <title>Work in Progress | Mark Roe</title>
+
+  <style>
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    .site-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Georgia', serif;
+      background: #fdfdfb;
+      color: #222;
+      overflow: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80px;
+      padding: 0 40px;
+      font-size: 1.55rem;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .container {
+      height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 60px;
+      padding-top: 0px;
+    }
+
+    .card {
+      max-width: 720px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 40px 40px;
+      background: #fff;
+    }
+
+    h1 {
+      font-variant: small-caps;
+      font-size: 2.6rem;
+      margin: 0 0 18px 0;
+      border-bottom: 2px solid #666;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 16px 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .actions {
+      margin-top: 26px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid #666;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #222;
+      font-size: 1.05rem;
+    }
+
+    .btn:hover {
+      background: #f2f2ef;
+      border-color: #000;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .site-logo {
+        height: 60px;
+        margin: 0 auto;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      body {
+        overflow: auto;
+        height: auto;
+      }
+
+      .container {
+        height: auto;
+        padding: 40px 20px 60px 20px;
+      }
+
+      .card {
+        padding: 28px 22px;
+I          }
+
+      h1 {
+        font-size: 2.0rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="assets/logos/logo.png" alt="Logo" class="site-logo">
+    </a>
+  </header>
+
+  <nav>
+    <a href="index.html" title="Return to the homepage">Home</a>
+    <a href="about.html" title="Learn more about me">About</a>
+    <a href="portfolio.html" title="View my project work">Portfolio</a>
+    <a href="cv.html" title="See my academic and work history">CV</a>
+    <a href="contact.html" title="Get in touch">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h1>Work in Progress</h1>
+      <p>
+        Apologies, this page is still a work in progress.
+      </p>
+      <p>
+        Feel free to browse the rest of the site, or check back shortly.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="portfolio.html">← Back to Portfolio</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

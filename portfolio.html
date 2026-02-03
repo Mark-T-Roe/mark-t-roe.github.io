@@ -14,6 +14,8 @@
   <link rel="icon" href="assets/icons/favicon.ico" media="(prefers-color-scheme: light)">
   <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8" />
   <title>Portfolio | Mark Roe</title>
   <style>
@@ -126,7 +128,7 @@
     position: static;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
   }
 
   .site-logo {
@@ -137,46 +139,77 @@
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
-    font-size: 1.2rem;
+    gap: 10px 14px;
+    padding: 0.75rem 1rem 1rem 1rem;
+    font-size: 1.15rem;
     text-align: center;
+    height: auto;
+  }
+
+  nav a {
+    margin-left: 0; /* override desktop spacing */
   }
 
   h1 {
-    font-size: 2rem;
-    padding: 0 10px;
+    font-size: 2.0rem;
+    margin: 12px auto 18px auto;
+    padding: 0 12px 10px 12px;
+    max-width: 92%;
   }
 
   .portfolio-container {
-    padding: 100px 20px 40px 20px;
+    margin: 0 auto;
+    padding: 10px 16px 40px 16px;
+    max-width: 720px;
   }
 
   .project {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 30px;
+    align-items: stretch;
+    text-align: left;
+    gap: 14px;
+
+    /* Make each project feel like a “card” */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 18px;
+    background: #fff;
+  }
+
+  /* Remove the desktop divider line when using card style */
+  .project {
+    border-bottom: none;
+    padding-bottom: 16px;
   }
 
   .project img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    max-height: none;
+    border-radius: 6px;
   }
 
   .project-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+    margin: 6px 0 6px 0;
+    line-height: 1.25;
   }
 
   .project-content p {
     font-size: 1.05rem;
-    padding: 0 10px;
+    line-height: 1.65;
+    margin: 8px 0;
   }
 
   .tags {
     font-size: 0.95rem;
+    color: #555;
+    margin-top: 6px;
   }
 }
+
 
 
   </style>

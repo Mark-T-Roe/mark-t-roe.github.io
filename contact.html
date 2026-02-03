@@ -138,111 +138,322 @@
       height: 100%;
     }
 
-@media (max-width: 768px) {
-  header {
-    position: static;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0 0.5rem 0;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-14HMNXG7DB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-14HMNXG7DB');
+  </script>
 
-  .site-logo {
-    height: 60px;
-    margin: 0 auto;
-  }
+  <!-- Favicons -->
+  <link rel="icon" href="assets/icons/favicon.ico" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/icons/favicon-white.ico" media="(prefers-color-scheme: dark)">
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 14px;
-    padding: 0.75rem 1rem 1rem 1rem;
-    font-size: 1.2rem;
-    text-align: center;
-    height: auto;          /* important */
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  nav a {
-    margin-left: 0;        /* undo desktop spacing */
-  }
+  <title>Contact | Mark Roe</title>
 
-  /* Let the page scroll naturally */
-  body {
-    height: auto;
-  }
+  <style>
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      z-index: 1000;
+    }
 
-  .contact-container {
-    padding: 18px 16px 40px 16px;
-  }
+    .site-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
 
-  h1 {
-    width: 100%;
-    font-size: 2rem;
-    padding: 0 10px 10px 10px;
-    box-sizing: border-box;
-    margin: 12px auto 18px auto;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: #fdfdfb;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-  /* Mobile: single card layout */
-  .contact-block {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80px;
+      padding: 0 40px;
+      font-size: 1.55rem;
+      color: #666;
+    }
 
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 18px 16px;
-    background: #fff;
-    max-width: 520px;
-    width: 100%;
-    margin: 0 auto;
-  }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+    }
 
-  .divider {
-    display: none;
-  }
+    nav a:hover {
+      color: #000;
+    }
 
-  .contact-labels,
-  .contact-values {
-    text-align: left;
-    align-items: stretch;
-    gap: 14px;
-  }
+    .contact-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      padding-top: 0px;
+    }
 
-  .contact-labels {
-    min-width: 0;
-  }
+    h1 {
+      font-variant: small-caps;
+      width: 1000px;
+      font-size: 2.8rem;
+      margin-top: 40px;
+      padding-top: 10px;
+      border-bottom: 2px solid #666;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
 
-  .contact-labels p {
-    justify-content: flex-start;
-    margin: 0;
-  }
+    .contact-block {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
 
-  .contact-values p {
-    margin: 0;
-  }
+    .contact-labels,
+    .contact-values {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
 
-  .contact-labels img {
-    width: 24px;
-    height: 24px;
-  }
+    .contact-labels {
+      font-weight: bold;
+      color: #444;
+      min-width: 160px;
+      text-align: left;
+    }
 
-  /* Bigger, nicer tap targets */
-  .contact-values a {
-    display: inline-block;
-    font-size: 1.08rem;
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    background: #fdfdfb;
-  }
+    .contact-labels p {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      margin: 0;
+    }
 
-  .contact-values a:hover {
-    text-decoration: none;
-    border-color: #666;
-  }
-}
+    .contact-labels img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    .contact-values p {
+      margin: 0;
+    }
+
+    .contact-values a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .contact-values a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      width: 1px;
+      background-color: #999;
+      height: 100%;
+    }
+
+    /* Mobile-only list (hidden on desktop) */
+    .contact-list {
+      display: none;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+      margin-bottom: 14px;
+    }
+
+    .contact-item .label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .contact-item .label img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .contact-item a {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fdfdfb;
+      text-decoration: none;
+      color: #222;
+      font-size: 1.05rem;
+    }
+
+    .contact-item a:hover {
+      border-color: #666;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0 0.5rem 0;
+      }
+
+      .site-logo {
+        height: 60px;
+        margin: 0 auto;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        padding: 0.75rem 1rem 1rem 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        height: auto;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+
+      body {
+        height: auto;
+      }
+
+      .contact-container {
+        padding: 18px 16px 40px 16px;
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 2rem;
+        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
+        margin: 12px auto 18px auto;
+      }
+
+      /* Hide the desktop two-column block on mobile */
+      .contact-block {
+        display: none;
+      }
+
+      /* Show the mobile list */
+      .contact-list {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="assets/logos/logo.png" alt="Logo" class="site-logo">
+    </a>
+  </header>
+
+  <nav>
+    <a href="index.html" title="Return to the homepage">Home</a>
+    <a href="about.html" title="Learn more about me">About</a>
+    <a href="portfolio.html" title="View my project work">Portfolio</a>
+    <a href="cv.html" title="See my academic and work history">CV</a>
+    <a href="contact.html" title="Get in touch">Contact</a>
+  </nav>
+
+  <div class="contact-container">
+    <h1>Get in Touch</h1>
+
+    <!-- Desktop layout (unchanged) -->
+    <div class="contact-block">
+      <div class="contact-labels">
+        <p><img src="assets/icons/email.png" alt="Email icon" /> Email</p>
+        <p><img src="assets/icons/phone.png" alt="Phone icon" /> Phone</p>
+        <p><img src="assets/icons/Git.png" alt="GitHub icon" /> GitHub</p>
+        <p><img src="assets/icons/link.png" alt="LinkedIn icon" /> LinkedIn</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="contact-values">
+        <p><a href="mailto:G00440145@atu.ie">G00440145@atu.ie</a></p>
+        <p><a href="tel:+353872492766">+353 87 249 2766</a></p>
+        <p><a href="https://github.com/Mark-T-Roe" target="_blank" rel="noopener">github.com/Mark-T-Roe</a></p>
+        <p><a href="https://www.linkedin.com/in/mark-roe-1266411bb/" target="_blank" rel="noopener">linkedin.com/in/mark-roe</a></p>
+      </div>
+    </div>
+
+    <!-- Mobile layout (label + value paired) -->
+    <div class="contact-list">
+      <div class="contact-item">
+        <div class="label"><img src="assets/icons/email.png" alt="Email icon" /> Email</div>
+        <a href="mailto:G00440145@atu.ie">G00440145@atu.ie</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="label"><img src="assets/icons/phone.png" alt="Phone icon" /> Phone</div>
+        <a href="tel:+353872492766">+353 87 249 2766</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="label"><img src="assets/icons/Git.png" alt="GitHub icon" /> GitHub</div>
+        <a href="https://github.com/Mark-T-Roe" target="_blank" rel="noopener">github.com/Mark-T-Roe</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="label"><img src="assets/icons/link.png" alt="LinkedIn icon" /> LinkedIn</div>
+        <a href="https://www.linkedin.com/in/mark-roe-1266411bb/" target="_blank" rel="noopener">linkedin.com/in/mark-roe</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
 
 
 
